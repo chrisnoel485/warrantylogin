@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('adminlte::register')
 
 @section('content')
 <div class="container">
@@ -75,3 +75,5 @@
     </div>
 </div>
 @endsection
+
+<link rel="stylesheet" href="{{asset('css/app.css')}}">

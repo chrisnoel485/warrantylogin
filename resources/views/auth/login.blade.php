@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('adminlte::login')
 
 @section('content')
 <div class="container">
@@ -70,4 +70,8 @@
         </div>
     </div>
 </div>
+@endsection
+
+@section('css')
+  <link rel="stylesheet" href="{{asset('css/app.css')}}">
 @endsection
