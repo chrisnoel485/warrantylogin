@@ -14,8 +14,13 @@ class CreateWarrantiesTable extends Migration
     public function up()
     {
         Schema::create('warranties', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+            $table->integer('server_sn')->unsigned();
+            $table->string('tahun_pembelian');
             $table->timestamps();
+ 
+            $table->foreign('server_sn')->references('sn')->on('servers')
+                  ->onDelete('cascade');
         });
     }
 
