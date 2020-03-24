@@ -22,7 +22,7 @@
 						@foreach($server as $p)
 						<tr>
 							<td>{{ $p->hostname }}</td>
-							<td>[{ $p->warranty->expired_warranty }]</td>
+							<td>[ $p->warranty->expired_warranty ]</td>
 						</tr>
 						@endforeach
 					</tbody>
