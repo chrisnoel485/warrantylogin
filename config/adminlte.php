@@ -274,16 +274,30 @@ return [
                 ],
             ],
         ],
-        ['header' => 'server_inventory'],
+        ['header' => 'Inventory'],
         [
-            'text' => 'Server',
-            'url'  => 'admin/profile',
-            'icon' => 'fas fa-fw fa-user',
-        ],
-        [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
+            'text'    => 'Server',
+            'icon'    => 'fas fa-fw fa-server',
+            'submenu' => [
+                [
+                    'text' => 'Fisik',
+                    'url'  => 'server/fisik/home',
+                    'submenu' => [
+                        [
+                            'text' => 'HP',
+                            'url'  => 'server/fisik/home',
+                        ],
+                        [
+                            'text'    => 'Lenovo',
+                            'url'     => 'server/fisik/home',
+                        ],
+                    ],
+                ],
+                [
+                    'text' => 'Virtual Machine (VM)',
+                    'url'  => 'server/vm/home',
+                ],
+            ],
         ],
 
         ['header' => 'labels'],
