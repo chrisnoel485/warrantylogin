@@ -14,7 +14,7 @@ class Warranty extends Migration
     public function up()
     {
         //
-        Schema::create('server', function (Blueprint $table) {
+        Schema::create('warranty', function (Blueprint $table) {
             $table->increments('id');
             $table->string('hostname');
             $table->string('server_sn');
