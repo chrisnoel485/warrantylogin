@@ -274,6 +274,18 @@ return [
                 ],
             ],
         ],
+        ['header' => 'server_inventory'],
+        [
+            'text' => 'Server',
+            'url'  => 'admin/profile',
+            'icon' => 'fas fa-fw fa-user',
+        ],
+        [
+            'text' => 'change_password',
+            'url'  => 'admin/settings',
+            'icon' => 'fas fa-fw fa-lock',
+        ],
+
         ['header' => 'labels'],
         [
             'text'       => 'important',
