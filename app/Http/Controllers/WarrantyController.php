@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Warranty;
+use App\Server;
 use Illuminate\Http\Request;
 
 class WarrantyController extends Controller
@@ -15,6 +16,10 @@ class WarrantyController extends Controller
     public function index()
     {
         //
+        // mengambil semua data pengguna
+    	$server = Servers::all();
+    	// return data ke view
+    	return view('server/warranty', ['server' => $server]);
     }
 
     /**
