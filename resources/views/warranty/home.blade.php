@@ -14,7 +14,7 @@
 						</tr>
 					</thead>
 					<tbody>
-						@foreach($warranty as $p)
+						@foreach($server as $p)
 						<tr>
 							<td>{{ $p->sn }}</td>
                             <td>{{ $p->hostname }}</td>
