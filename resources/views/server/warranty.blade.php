@@ -1,3 +1,5 @@
+@extends('adminlte::page')
+@section('content')
 <div class="container">
 		<div class="card mt-5">
 			<div class="card-body">
@@ -26,3 +28,8 @@
 			</div>
 		</div>
 	</div>
+    @endsection
+
+@section('css')
+  <link rel="stylesheet" href="{{asset('css/app.css')}}">
+@endsection
