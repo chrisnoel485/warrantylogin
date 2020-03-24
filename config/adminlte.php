@@ -239,22 +239,11 @@ return [
         ['header' => 'Inventory'],
         [
             'text'    => 'Server',
-            'url'     => 'server/home',
             'icon'    => 'fas fa-fw fa-server',
             'submenu' => [
                 [
                     'text' => 'Fisik',
                     'url'  => 'server/fisik/home',
-                    'submenu' => [
-                        [
-                            'text' => 'HP',
-                            'url'  => 'server/fisik/hp',
-                        ],
-                        [
-                            'text'    => 'Lenovo',
-                            'url'     => 'server/fisik/lenovo',
-                        ],
-                    ],
                 ],
                 [
                     'text' => 'Virtual Machine (VM)',
