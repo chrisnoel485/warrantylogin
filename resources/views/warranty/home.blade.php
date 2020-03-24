@@ -18,8 +18,7 @@
 						<tr>
 							<td>{{ $p->sn }}</td>
                             <td>{{ $p->hostname }}</td>
-							<td>{{ $p->warranty->tahun_pembelian}}</td>
-                            <td>{{ $p->warranty->expired_warranty}}</td>
+							<td>{{ $p->warranty->tahun_pembelian }}</td>
 						</tr>
 						@endforeach
 					</tbody>
