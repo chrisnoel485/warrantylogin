@@ -19,7 +19,7 @@ class CreateWarrantiesTable extends Migration
             $table->string('tahun_pembelian');
             $table->timestamps();
  
-            $table->foreign('server_id')->references('id)->on('servers')
+            $table->foreign('server_id')->references('id)->on('server')
                   ->onDelete('cascade');
         });
     }
