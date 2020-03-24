@@ -274,6 +274,12 @@ return [
                 ],
             ],
         ],
+        ['header' => 'account_settings'],
+        [
+            'text' => 'Server',
+            'url'  => 'Server/home',
+            'icon' => 'fas fa-fw fa-user',
+        ],
         ['header' => 'labels'],
         [
             'text'       => 'important',
