@@ -25,5 +25,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-
 Route::get('admin/profile', 'ProfileController@index');
+
+Route::get('server/warranty/home', 'WarrantyController@index');
