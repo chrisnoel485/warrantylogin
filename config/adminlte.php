@@ -239,8 +239,8 @@ return [
         ['header' => 'Inventory'],
         [
             'text'    => 'Server',
-            'icon'    => 'fas fa-fw fa-server',
             'url'     => 'server/home',
+            'icon'    => 'fas fa-fw fa-server',
             'submenu' => [
                 [
                     'text' => 'Fisik',
