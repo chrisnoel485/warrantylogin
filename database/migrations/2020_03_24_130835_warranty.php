@@ -20,6 +20,8 @@ class Warranty extends Migration
             $table->string('expired_warranty');
             $table->string('server_sn');
             $table->timestamps();
+            $table->foreign('server_sn')->references('sn')->on('server')
+            ->onDelete('cascade');
         });
     }
 
