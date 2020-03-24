@@ -11,6 +11,6 @@ class ServerController extends Controller
     public function index()
     {
     	$server = Server::all();
-        return view('warranty', ['server' => $server]);
+        return view('server', ['server' => $server]);
     }
 }
