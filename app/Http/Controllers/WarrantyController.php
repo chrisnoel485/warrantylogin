@@ -17,7 +17,7 @@ class WarrantyController extends Controller
     {
         //
         // mengambil semua data pengguna
-    	$server = Servers::all();
+    	$server = Server::all();
     	// return data ke view
     	return view('server/warranty', ['server' => $server]);
     }
