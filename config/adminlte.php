@@ -278,6 +278,7 @@ return [
         [
             'text'    => 'Server',
             'icon'    => 'fas fa-fw fa-server',
+            'url'     => 'server/home',
             'submenu' => [
                 [
                     'text' => 'Fisik',
@@ -285,11 +286,11 @@ return [
                     'submenu' => [
                         [
                             'text' => 'HP',
-                            'url'  => 'server/fisik/home',
+                            'url'  => 'server/fisik/hp',
                         ],
                         [
                             'text'    => 'Lenovo',
-                            'url'     => 'server/fisik/home',
+                            'url'     => 'server/fisik/lenovo',
                         ],
                     ],
                 ],
