@@ -10,9 +10,7 @@ class WarrantyController extends Controller
     //
     public function index()
     {
-    	// mengambil semua data pengguna
     	$warranty = Warranty::all();
-    	// return data ke view
-    	return view('warranty', ['warranty' => $warranty]);
+        return view('warranty', ['warranty' => $warranty]);
     }
 }

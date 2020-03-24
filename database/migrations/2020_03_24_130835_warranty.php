@@ -14,6 +14,12 @@ class Warranty extends Migration
     public function up()
     {
         //
+        Schema::create('server', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('hostname');
+            $table->string('server_sn');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -24,5 +30,6 @@ class Warranty extends Migration
     public function down()
     {
         //
+        Schema::dropIfExists('warranty');
     }
 }

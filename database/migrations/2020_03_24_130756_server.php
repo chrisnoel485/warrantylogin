@@ -14,6 +14,11 @@ class Server extends Migration
     public function up()
     {
         //
+        Schema::create('server', function (Blueprint $table) {
+            $table->sn;
+            $table->string('hostname');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -24,5 +29,6 @@ class Server extends Migration
     public function down()
     {
         //
+        Schema::dropIfExists('server');
     }
 }
