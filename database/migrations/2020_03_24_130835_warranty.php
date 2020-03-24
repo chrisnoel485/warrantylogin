@@ -16,7 +16,8 @@ class Warranty extends Migration
         //
         Schema::create('warranty', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('hostname');
+            $table->string('tahun_pembelian');
+            $table->string('expired_warranty');
             $table->string('server_sn');
             $table->timestamps();
         });

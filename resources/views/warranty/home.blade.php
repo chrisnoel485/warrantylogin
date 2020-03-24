@@ -7,15 +7,19 @@
 				<table class="table table-bordered table-striped">
 					<thead>
 						<tr>
-							<th></th>
-							<th>Nomor Telepon</th>
+							<th>Serial Number</th>
+							<th>Hostname</th>
+                            <th>Tahun Pembelian</th>
+                            <th>Expired Warranty</th>
 						</tr>
 					</thead>
 					<tbody>
-						@foreach($pengguna as $p)
+						@foreach($warranty as $p)
 						<tr>
-							<td>{{ $p->nama }}</td>
-							<td>{{ $p->telepon->nomor_telepon }}</td>
+							<td>{{ $p->sn }}</td>
+                            <td>{{ $p->hostname }}</td>
+							<td>{{ $p->Warranty->tahun_pembelian }}</td>
+                            <td>{{ $p->Warranty->expired_warranty }}</td>
 						</tr>
 						@endforeach
 					</tbody>
