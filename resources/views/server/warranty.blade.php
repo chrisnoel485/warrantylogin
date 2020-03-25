@@ -13,13 +13,13 @@
 						</tr>
 					</thead>
 					<tbody>
-						@foreach($server= $p && $warranty=$pa)
+						@foreach($server as $p)
 						<tr>
 							<td>{{ $p->id }}</td>
 							<td>{{ $p->hostname }}</td>
 						
-							<td>{{ $pa->tahun_pemebelian }}</td>
-							<td>{{ $pa->expired_warranty }}</td>
+							<td>{{ $p->warranties->tahun_pemebelian }}</td>
+							<td>{{ $pa->warranties->expired_warranty }}</td>
 						</tr>
 						@endforeach						
 					</tbody>
