@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Pengguna extends Model
 {
     //
-    protected $table = "penggunas";
+    protected $table = "pengguna";
  
     public function telepon()
     {
