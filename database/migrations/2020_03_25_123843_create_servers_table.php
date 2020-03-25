@@ -15,6 +15,12 @@ class CreateServersTable extends Migration
     {
         Schema::create('servers', function (Blueprint $table) {
             $table->id();
+            $table->string('hostname');
+            $table->string('sn');
+            $table->string('kp');
+            $table->string('merek');
+            $table->string('tahun');
+            $table->string('expired');
             $table->timestamps();
         });
     }
