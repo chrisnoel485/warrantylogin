@@ -52,8 +52,6 @@
                         {{ Form::submit('Proses', ['class' => 'btn btn-primary pull-right']) }}
                     </div>
                 </div>
-            <!-- </form> -->
-            {{ Form::close() }}
         </div>
     </div>
 @endsection
