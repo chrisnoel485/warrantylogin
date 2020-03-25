@@ -17,8 +17,8 @@ class CreateServersTable extends Migration
             $table->id();
             $table->string('sn');
             $table->string('hostname');
-            $table->integer('kp_id')->unsigned();
-            $table->integer('merek_id')->unsigned();
+            $table->bigInteger('kp_id')->unsigned();
+            $table->bigInteger('merek_id')->unsigned();
             $table->timestamps();
             $table->foreign('kp_id')->references('id')->on('kps')
                   ->onDelete('cascade');
