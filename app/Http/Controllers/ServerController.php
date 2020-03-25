@@ -28,7 +28,7 @@ class ServerController extends Controller
     {
         //
     
-        $datas = Server::get();
+        $datas = Server::all();
         return view('server.index', compact('datas'));
 
     }
