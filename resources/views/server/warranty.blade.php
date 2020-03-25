@@ -8,19 +8,19 @@
 				<table class="table table-bordered table-striped">
 					<thead>
 						<tr>
+							<th>Serial Number</th>
 							<th>Hostname</th>
-							<th>SN</th>
                             <th>Tahun Pembelian</th>
 							<th>Expired Warranty</th>
 						</tr>
 					</thead>
 					<tbody>
-						@foreach($server as $p)
+						@foreach($servers as $p)
 						<tr>
+							<td>{{ $p->id }}</td>
 							<td>{{ $p->hostname }}</td>
-                            <td>{{ $p->id }}</td>
-							<td>{{ $p->warranty->tahun_pembelian }}</td>
-                            <td>{{ $p->warranty->expired_warranty }}</td>
+							<td>{{ $p->warranties->tahun_pembelian }}</td>
+                            <td>{{ $p->warranties->expired_warranty }}</td>
 						</tr>
 						@endforeach
 					</tbody>
