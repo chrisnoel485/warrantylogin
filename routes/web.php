@@ -27,4 +27,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('admin/profile', 'ProfileController@index');
 
-Route::resource('server', 'ServerController');
+Route::get('server', 'ServerController@index');
+//Route::resource('transaksi', 'TransaksiController');
