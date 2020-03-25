@@ -37,7 +37,7 @@
                         <tbody>
                             @foreach($server as $server)
                             <tr>
-                                <td class="text-center">{{ $server['hostname'] }}</td>
+                                <td class="text-center">{{ $server->hostname }}</td>
                                 <td>{{ $server->sn }}</td>
                                 <td>{{ $server->kp }}</td>
                                 <td>{{ $server->merek }}</td>
