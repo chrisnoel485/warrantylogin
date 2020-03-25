@@ -19,7 +19,7 @@
 							<td>{{ $p->hostname }}</td>
 						</tr>
 						@endforeach
-						@foreach ($warranty as $war)
+						@foreach ($warranties as $war)
 						<tr>
 						<td></td>
 							{{ $war->tahun_pembelian}}
