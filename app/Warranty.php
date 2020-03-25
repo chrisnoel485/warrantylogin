@@ -7,10 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 class Warranty extends Model
 {
     //
-    protected $table = "warranties";
+    protected $table = "servers";
  
     public function server()
     {
-    	return $this->belongsTo('App\Server');
+    	return $this->belongsTo('App\Warranty');
     }
 }
