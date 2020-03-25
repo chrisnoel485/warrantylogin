@@ -8,6 +8,7 @@ class Pengguna extends Model
 {
     //
     protected $table = "pengguna";
+    protected $fillable = ['id', 'nama'];
  
     public function telepon()
     {

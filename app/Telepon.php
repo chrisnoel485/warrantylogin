@@ -8,9 +8,9 @@ class Telepon extends Model
 {
     //
     protected $table = "telepon";
- 
+    protected $fillable = ['id', 'nomor_telepon','pengguna_id']; 
     public function pengguna()
     {
-    	return $this->belongsTo('App\Pengguna');
+    	return $this->belongsTo('App\Pengguna','pengguna_id');
     }
 }
