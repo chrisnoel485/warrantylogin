@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Server;
-use App\Warranty;
+//use App\Warranty;
 use Illuminate\Http\Request;
 
 class ServerController extends Controller
