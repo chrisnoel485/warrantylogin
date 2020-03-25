@@ -8,6 +8,7 @@ class Server extends Model
 {
     //
     protected $table = "servers";
+    protected $fillable = ['id','hostname'];
  
     public function warranty()
     {
