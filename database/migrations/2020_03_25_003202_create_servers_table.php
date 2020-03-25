@@ -14,7 +14,7 @@ class CreateServersTable extends Migration
     public function up()
     {
         Schema::create('servers', function (Blueprint $table) {
-            $table->bigIncrements('sn');
+            $table->increments('sn');
             $table->string('hostname');
             $table->timestamps();
         });
