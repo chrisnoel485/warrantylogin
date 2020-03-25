@@ -13,7 +13,7 @@
 						</tr>
 					</thead>
 					<tbody>
-						@foreach($server as $p && $warranty as $pa)
+						@foreach($server== $p && $warranty== $pa)
 						<tr>
 							<td>{{ $p->id }}</td>
 							<td>{{ $p->hostname }}</td>
