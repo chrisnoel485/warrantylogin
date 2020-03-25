@@ -15,6 +15,7 @@ class CreateKpsTable extends Migration
     {
         Schema::create('kps', function (Blueprint $table) {
             $table->id();
+            $table->integer('kp');
             $table->timestamps();
         });
     }

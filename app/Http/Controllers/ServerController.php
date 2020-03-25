@@ -3,7 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Server;
+use App\Kp;
+use App\Merek;
 use Illuminate\Http\Request;
+use Session;
+use Illuminate\Support\Facades\Redirect;
+use Auth;
+use DB;
+use RealRashid\SweetAlert\Facades\Alert;
+use Carbon\Carbon;
 
 class ServerController extends Controller
 {
@@ -12,9 +20,17 @@ class ServerController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
         //
+    
+        $datas = Server::get();
+        return view('server.index', compact('datas'));
+
     }
 
     /**
