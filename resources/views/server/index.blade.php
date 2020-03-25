@@ -38,11 +38,11 @@
                             @foreach($server as $server)
                             <tr>
                                 <td class="text-center">{{ $server['hostname'] }}</td>
-                                <td>{{ $server['sn'] }}</td>
-                                <td>{{ $server['kp'] }}</td>
-                                <td>{{ $server['merek'] }}</td>
-                                <td>{{ $server['tahun'] }}</td>
-                                <td>{{ $server['expired'] }}</td>
+                                <td>{{ $server->sn }}</td>
+                                <td>{{ $server->kp }}</td>
+                                <td>{{ $server->merek }}</td>
+                                <td>{{ $server->tahun }}</td>
+                                <td>{{ $server->expired }}</td>
                                 <td class="text-center">
                                   <a href="/server/edit/{{ $p->pegawai_id }}">Edit</a>
                                   | 
