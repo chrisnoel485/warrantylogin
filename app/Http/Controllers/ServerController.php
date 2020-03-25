@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Server;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ServerController extends Controller
 {
@@ -12,9 +13,17 @@ class ServerController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
         //
+        $pegawai = DB::table('servers')->get();
+ 
+    	return view('server/index',['server' => $server]);
     }
 
     /**

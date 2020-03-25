@@ -2,78 +2,65 @@
 
 @section('content')
 <div class="row">
-    <div class="col-lg-12">
-                  @if (Session::has('message'))
-                  <div class="alert alert-{{ Session::get('message_type') }}" id="waktu2" style="margin-top:10px;">{{ Session::get('message') }}</div>
-                  @endif
-                  </div>
-</div>
-<div class="row" style="margin-top: 20px;">
-<div class="col-lg-12 grid-margin stretch-card">
-              <div class="card">
-
-                <div class="card-body">
-                  <h4 class="card-title">Data Server</h4>
-                  
-                  <div class="table-responsive">
-                    <table class="table table-striped" id="table">
-                      <thead>
-                        <tr>
-                          <th>
-                            Serial Number Server
-                          </th>
-                          <th>
-                            Hostname Server
-                          </th>
-                          <th>
-                            KP
-                          </th>
-                          <th>
-                            Merek Server
-                          </th>
-                          <th>
-                            Action
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                      @foreach($datas as $data)
-                        <tr>
-                            <td class="py-1">
-                                {{$data->id}}
-                                </a>
-                            </td>
-                            <td>
-                                {{$data->id}}
-                            </td>
-                            <td>
-                                {{$data->kps->kp}}
-                            </td>
-                            <td>
-                                {{$data->mereks->merek}}
-                            </td>
-                            <td>
-                                <div class="btn-group dropdown">
-                                    <button type="button" class="btn btn-success dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Action
-                                    </button>
-                                    <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 30px, 0px);">
-                                        <button class="dropdown-item" onclick="return confirm('Anda yakin ingin menghapus data ini?')"> Delete
-                                        </button>
-                                
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                      @endforeach
-                      </tbody>
-                    </table>
-                  </div>
-               {{--  {!! $datas->links() !!} --}}
-                </div>
-              </div>
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Data Server</h3>
+                <div class="card-tools">
+                 <a href="{{ URL::to('/server/create')}}" class="btn btn-tool">
+                     <i class="fa fa-plus"></i>
+                     &nbsp; Add
+                 </a>
+             </div>
+         </div>
+         <div class="card-body">
+            @if (Session::has('message'))
+            <div id="alert-msg" class="alert alert-success alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                {{ Session::get('message') }}
             </div>
-          </div>
+            @endif
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                            <tr class="text-center">
+                                <th>Hostname</th>
+                                <th>Serial Number</th>
+                                <th>KP</th>
+                                <th>Merek</th>
+                                <th>Tahun Pembelian</th>
+                                <th>Expired Warranty</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach($server as $server)
+                            <tr>
+                                <td class="text-center">{{ $server['hostname'] }}</td>
+                                <td>{{ $server['sn'] }}</td>
+                                <td>{{ $server['kp'] }}</td>
+                                <td>{{ $server['merek'] }}</td>
+                                <td>{{ $server['tahun'] }}</td>
+                                <td>{{ $server['expired'] }}</td>
+                                <td class="text-center">
+                                  <a href="/server/edit/{{ $p->pegawai_id }}">Edit</a>
+                                  | 
+		                              <a href="/server/hapus/{{ $p->pegawai_id }}">Hapus</a>
+                                </td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+ 
+ 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+ 
 @endsection
 
 @section('css')
