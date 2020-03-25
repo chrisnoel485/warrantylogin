@@ -13,7 +13,7 @@
 						</tr>
 					</thead>
 					<tbody>
-						@foreach($servers as $p)
+						@foreach($server as $p)
 						<tr>
 							<td>{{ $p->id }}</td>
 							<td>{{ $p->hostname }}</td>
