@@ -16,30 +16,36 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
+                                { csrf_field() }}
                                     {{ Form::label('hostname', 'Hostname Server') }}
                                     {{ Form::text('hostname', '', ['class'=>'form-control', 'placeholder'=>'Masukkan Hostname Server']) }}
                                 </div>
                                 <div class="form-group">
+                                { csrf_field() }}
                                     {{ Form::label('sn', 'Serial Number Server') }}
                                     {{ Form::text('sn', '', ['class'=>'form-control', 'placeholder'=>'Masukkan Serial Number Server']) }}
                                 </div>
                                 <div class="form-group">
+                                { csrf_field() }}
                                     {{ Form::label('tahun_pembelian', 'Tahun Pembelian') }}
                                     {{ Form::text('tahun_pembelian', '', ['class'=>'form-control', 'placeholder'=>'Masukkan Tahun Pembelian Server']) }}
                                 </div>
                             </div>
                             <div class="col-md-6">  
                                 <div class="form-group">
+                                { csrf_field() }}
                                     {{ Form::label('kp', 'KP') }}
                                     {{ Form::select('kp', ['kp1'=>'kp1', 'kp2'=>'kp2','kp3'=>'kp3', 'dev1'=>'dev1','dev3'=>'dev3'], null,
                                         ['class'=>'form-control']) }}        
                                 </div>
                                 <div class="form-group">
+                                { csrf_field() }}
                                     {{ Form::label('merek', 'Merek') }}
                                     {{ Form::select('merek', ['lenovo'=>'lenovo', 'hp'=>'hp'], null,
                                         ['class'=>'form-control']) }}         
                                 </div>
                                 <div class="form-group">
+                                { csrf_field() }}
                                     {{ Form::label('expired', 'Expired Warranty Server') }}
                                     {{ Form::text('expired', '', ['class'=>'form-control', 'placeholder'=>'Masukkan Expired Warranty Server']) }}
                                 </div>
