@@ -27,4 +27,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('admin/profile', 'ProfileController@index');
 
-Route::get('server/warranty', 'ServerController@index');
+Route::get('server/warranty', 'WarrantyController@index');
