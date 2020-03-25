@@ -17,10 +17,16 @@
 						<tr>
 							<td>{{ $p->id }}</td>
 							<td>{{ $p->hostname }}</td>
-							<td>{{ $p->warranties->tahun_pembelian }}</td>
-                            <td>{{ $p->warranties->expired_warranty }}</td>
 						</tr>
 						@endforeach
+						@foreach ($warranty as $war)
+						<tr>
+						<td></td>
+							{{ $war->tahun_pembelian}}
+							{{ $war->expired_warranty}}  
+						</tr>
+						@endforeach
+						
 					</tbody>
 				</table>
 			</div>
