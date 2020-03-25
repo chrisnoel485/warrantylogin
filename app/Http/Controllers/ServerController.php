@@ -25,6 +25,7 @@ class ServerController extends Controller
     public function create()
     {
         //
+        return view('server/create');
     }
 
     /**
