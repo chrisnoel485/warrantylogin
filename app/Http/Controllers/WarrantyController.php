@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Server;
-use App\Warranty;
 use Illuminate\Http\Request;
 
 class WarrantyController extends Controller
@@ -17,8 +16,7 @@ class WarrantyController extends Controller
     {
         //
         $server = Server::all();
-        $warranty = Warranty::all();
-        return view('server/warranty',['server' => $server],['warranty'=>$warranty]);
+        return view('server/warranty',['server' => $server]);
         //return view('server/warranty',compact('servers','warranties','server','warranty'));
     }
 
