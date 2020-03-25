@@ -28,7 +28,7 @@
                                  
                                 <div class="form-group">
                                     {{ Form::label('kp', 'KP') }}
-                                    {{ Form::select('kp', ['kp1'=>'kp1', 'kp2'=>'kp2'],'kp3'=>'kp3', 'dev1'=>'dev1'],'dev3'=>'dev3'], null,
+                                    {{ Form::select('kp', ['kp1'=>'kp1', 'kp2'=>'kp2','kp3'=>'kp3', 'dev1'=>'dev1','dev3'=>'dev3'], null,
                                         ['class'=>'form-control']) }}        
                                 </div>
                                 <div class="form-group">
