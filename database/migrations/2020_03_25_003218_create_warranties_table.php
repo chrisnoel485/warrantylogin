@@ -15,7 +15,7 @@ class CreateWarrantiesTable extends Migration
     {
         Schema::create('warranties', function (Blueprint $table) {
             $table->id();
-            $table->integer('server_id');
+            $table->integer('server_id')->unsigned();
             $table->foreign('server_id')->references('id')->on('servers');
             $table->string('price');
             $table->timestamps();
