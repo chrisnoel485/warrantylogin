@@ -14,6 +14,9 @@ class PenggunaController extends Controller
     public function index()
     {
         //
+        $pengguna = Pengguna::all();
+    	// return data ke view
+    	return view('pengguna', ['pengguna' => $pengguna]);
     }
 
     /**

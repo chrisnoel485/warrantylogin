@@ -29,3 +29,4 @@ Route::get('admin/profile', 'ProfileController@index');
 
 Route::get('server', 'ServerController@index');
 //Route::resource('transaksi', 'TransaksiController');
+Route::get('/pengguna', 'PenggunaController@index');
