@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Server;
 use Illuminate\Http\Request;
 
-class WarrantyController extends Controller
+class ServerController extends Controller
 {
     /**
      * Display a listing of the resource.
