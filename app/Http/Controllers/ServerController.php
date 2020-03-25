@@ -21,7 +21,7 @@ class ServerController extends Controller
     public function index()
     {
         //
-        $pegawai = DB::table('server')->get();
+        $server = DB::table('servers')->get();
  
     	return view('server/index',['server' => $server]);
     }
