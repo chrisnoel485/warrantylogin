@@ -7,10 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 class Server extends Model
 {
     //
-    protected $table = "warranties";
+    protected $table = "servers";
  
     public function warranty()
     {
-    	return $this->hasOne('App\Server');
+    	return $this->hasOne('App\Warranty');
     }
 }

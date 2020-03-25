@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Warranty;
+use App\Server;
 use Illuminate\Http\Request;
 
-class WarrantyController extends Controller
+class ServerController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class WarrantyController extends Controller
     public function index()
     {
         //
-        $server = Warranty::all();
+        $server = Server::all();
     	return view('server/warranty', ['server' => $server]);
     }
 
