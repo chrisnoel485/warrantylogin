@@ -17,6 +17,7 @@ class WarrantyController extends Controller
         //
         $server = Server::all();
         return view('server/warranty',['server' => $server]);
+        
         //return view('server/warranty',compact('servers','warranties','server','warranty'));
     }
 
