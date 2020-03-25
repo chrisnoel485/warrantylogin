@@ -17,7 +17,8 @@ class CreateWarrantiesTable extends Migration
             $table->id();
             $table->integer('server_id')->unsigned();
             $table->foreign('server_id')->references('id')->on('servers');
-            $table->string('price');
+            $table->string('tahun_pemebelian');
+            $table->string('expired_warranty');
             $table->timestamps();
         });
     }
