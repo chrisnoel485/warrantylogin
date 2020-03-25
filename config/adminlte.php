@@ -243,7 +243,7 @@ return [
             'submenu' => [
                 [
                     'text' => 'Fisik',
-                    'url'  => 'server/index',
+                    'url'  => 'server',
                 ],
                 [
                     'text' => 'Virtual Machine (VM)',
