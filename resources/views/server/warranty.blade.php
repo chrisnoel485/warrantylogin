@@ -21,8 +21,8 @@
 						@endforeach		
 						@foreach($warranty as $pa)
 						<tr>
-							<td>{{ $pa->tahun_pembelian }}</td>
-							<td>{{ $p->expired_warranty }}</td>
+							<td>{{ $pa->tahun_pemebelian }}</td>
+							<td>{{ $pa->expired_warranty }}</td>
 						</tr>
 						@endforeach					
 					</tbody>
