@@ -15,15 +15,7 @@ class CreateServersTable extends Migration
     {
         Schema::create('servers', function (Blueprint $table) {
             $table->id();
-            $table->string('sn');
-            $table->string('hostname');
-            $table->bigInteger('kp_id')->unsigned();
-            $table->bigInteger('merek_id')->unsigned();
             $table->timestamps();
-            $table->foreign('kp_id')->references('id')->on('kps')
-                  ->onDelete('cascade');
-            $table->foreign('merek_id')->references('id')->on('mereks')
-                  ->onDelete('cascade');
         });
     }
 
