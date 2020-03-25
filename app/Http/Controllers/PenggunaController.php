@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Pengguna;
+use App\Telepon;
 
 class PenggunaController extends Controller
 {
@@ -16,8 +17,9 @@ class PenggunaController extends Controller
     {
         //
         $pengguna = Pengguna::all();
+        $telepon = Telepon::all();
     	// return data ke view
-    	return view('pengguna', ['pengguna' => $pengguna]);
+    	return view('pengguna', ['pengguna' => $pengguna],['telepon' => $telepon]);
     }
 
     /**
