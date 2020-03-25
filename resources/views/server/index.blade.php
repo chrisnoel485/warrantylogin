@@ -2,7 +2,9 @@
 
 @section('content')
 <div class="row">
-
+<div class="col-lg-2">
+    <a href="{{ route('server.create') }}" class="btn btn-primary btn-rounded btn-fw"><i class="fa fa-plus"></i> Tambah Transaksi</a>
+  </div>
     <div class="col-lg-12">
                   @if (Session::has('message'))
                   <div class="alert alert-{{ Session::get('message_type') }}" id="waktu2" style="margin-top:10px;">{{ Session::get('message') }}</div>
