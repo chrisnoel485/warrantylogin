@@ -41,6 +41,30 @@ class ServerController extends Controller
     public function create()
     {
         //
+        $getRow = Server::orderBy('id', 'DESC')->get();
+        $rowCount = $getRow->count();
+        
+        $lastId = $getRow->first();
+
+        $kode = "TR00001";
+        
+        if ($rowCount > 0) {
+            if ($lastId->id < 9) {
+                    $kode = "TR0000".''.($lastId->id + 1);
+            } else if ($lastId->id < 99) {
+                    $kode = "TR000".''.($lastId->id + 1);
+            } else if ($lastId->id < 999) {
+                    $kode = "TR00".''.($lastId->id + 1);
+            } else if ($lastId->id < 9999) {
+                    $kode = "TR0".''.($lastId->id + 1);
+            } else {
+                    $kode = "TR".''.($lastId->id + 1);
+            }
+        }
+
+        $bukus = Buku::where('jumlah_buku', '>', 0)->get();
+        $anggotas = Anggota::get();
+        return view('transaksi.create', compact('bukus', 'kode', 'anggotas'));
     }
 
     /**
