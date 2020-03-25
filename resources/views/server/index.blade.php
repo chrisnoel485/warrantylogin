@@ -41,7 +41,6 @@
                       @foreach($datas as $data)
                         <tr>
                             <td class="py-1">
-                                <a href="{{route('transaksi.show', $data->id)}}"> 
                                 {{$data->id}}
                                 </a>
                             </td>
