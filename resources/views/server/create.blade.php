@@ -50,8 +50,10 @@
                     <div class="card-footer">
                         <a href="{{ URL::to('server/index') }}" class="btn btn-outline-info">Kembali</a>
                         {{ Form::submit('Proses', ['class' => 'btn btn-primary pull-right']) }}
+                        <input type="submit" value="Simpan Data">
                     </div>
                 </div>
+                {{ Form::close() }}s
         </div>
     </div>
 @endsection
