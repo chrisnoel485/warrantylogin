@@ -67,7 +67,7 @@ class ServerController extends Controller
         ];
  
         $validator = Validator::make($rules, [
-            'hotname.required'=>'Nama Barang Tidak Boleh Kosong',
+            'hostname.required'=>'Nama Barang Tidak Boleh Kosong',
             'sn.required'=>'Harga Barang Tidak Boleh Kosong',
             'tahun_pembelian.required'=>'Deskripsi Tidak Boleh Kosong',
             'expired.required'=>'Expired Tidak Boleh Kosong'
