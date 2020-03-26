@@ -130,30 +130,6 @@ class ServerController extends Controller
      */
     public function update(Request $request)
     {
-        //
-        $rules =[
-            'hostname'=>'required',
-            'sn'=>'required',
-            'tahun_pembelian'=>'required',
-            'expired'=>'required'
-        ];
- 
-        $validator = Validator::make($rules, [
-            'hostname.required'=>'Nama Barang Tidak Boleh Kosong',
-            'sn.required'=>'Harga Barang Tidak Boleh Kosong',
-            'tahun_pembelian.required'=>'Deskripsi Tidak Boleh Kosong',
-            'expired.required'=>'Expired Tidak Boleh Kosong'
-        ]);
- 
-        //jika data ada yang kosong
-        if ($validator->fails()) {
- 
-            //refresh halaman
-            return Redirect::to('server/create')
-            ->withErrors($validator);
- 
-        }else{
-
             DB::table('servers')->where('id',$request->id)->update([
                 'hostname' => $request->hostname,
                 'sn' => $request->sn,
@@ -167,7 +143,6 @@ class ServerController extends Controller
             Session::flash('message','Succes Edit Server');
  
             return redirect('/server');
-        }
     }
 
     /**
