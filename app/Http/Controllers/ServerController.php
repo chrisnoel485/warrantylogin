@@ -59,12 +59,6 @@ class ServerController extends Controller
         // alihkan halaman ke halaman pegawai
         //return redirect('/pegawai');
          //
-
-         $input = $request->all();
-   
-        if($validator->fails()){
-            return $this->sendError('Validation Error.', $validator->errors());       
-        }
          $rules =[
             'hostname'=>'required',
             'sn'=>'required',
