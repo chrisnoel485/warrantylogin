@@ -7,6 +7,7 @@ use Redirect;
 use Session;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Validator;
 
 class ServerController extends Controller
 {
