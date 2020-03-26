@@ -154,7 +154,8 @@ class ServerController extends Controller
     {
         //
         DB::table('servers')->where('id',$id)->delete();
-		
+
+		Session::flash('message','Succes Delete Server');
 	    // alihkan halaman ke halaman pegawai
 	    return redirect('/server');
     }
