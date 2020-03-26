@@ -33,17 +33,17 @@
                                         <option value="KP1" {{ $p->kp =='KP1'?'selected':'' }}>KP1</option>
                                         <option value="KP2" {{ $p->kp =='KP2'?'selected':'' }}>KP2</option>
                                         <option value="KP3" {{ $p->kp =='KP3'?'selected':'' }}>KP3</option>
-                                        <option value="DEV1">DEV1</option>
-                                        <option value="DEV3">DEV3</option>
+                                        <option value="DEV1" {{ $p->kp =='DEV1'?'selected':'' }}>DEV1</option>
+                                        <option value="DEV3" {{ $p->kp =='DEV3'?'selected':'' }}>DEV3</option>
                                     </select>
                                     </div>
 			                    </div>
                                 <div class="form-group">
 			                        <label for="merek">Merek Server</label>
                                     <div>
-                                    <select value="{{ $p->merek }}" id="merek" name="merek"class="form-control">
-                                        <option value="HP">HP</option>
-                                        <option value="Lenovo">Lenovo</option>
+                                    <select id="merek" name="merek"class="form-control">
+                                        <option value="HP" {{ $p->merek =='HP'?'selected':'' }}>HP</option>
+                                        <option value="Lenovo" {{ $p->merek =='Lenovo'?'selected':'' }}>Lenovo</option>
                                     </select>
                                     </div>
 			                    </div>
