@@ -44,9 +44,9 @@
                                 <td>{{ $server->tahun }}</td>
                                 <td>{{ $server->expired }}</td>
                                 <td class="text-center">
-                                  <a href="/server/edit/{{ $server->id }}">Edit</a>
+                                    <a class="btn btn-info" href="/server/edit/{{ $server->id }}"><i class="fa fa-eye"></i></a>
                                   | 
-		                              <a href="/server/hapus/{{ $server->id }}">Hapus</a>
+		                            <a href="/server/hapus/{{ $server->id }}">Hapus</a>
                                 </td>
                             </tr>
                             @endforeach
