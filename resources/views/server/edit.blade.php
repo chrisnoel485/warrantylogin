@@ -6,7 +6,7 @@
                     <div class="card-header">
                         <h3 class="card-title">Edit Data Server</h3>
                     </div>
-                    @foreach($server as $p)
+                    @foreach($servers as $p)
                     <form action="/server/update" method="post">
                     {{ csrf_field() }}
                     <div class="card-body">
