@@ -59,6 +59,12 @@ class ServerController extends Controller
         // alihkan halaman ke halaman pegawai
         //return redirect('/pegawai');
          //
+
+         $input = $request->all();
+   
+        if($validator->fails()){
+            return $this->sendError('Validation Error.', $validator->errors());       
+        }
          $rules =[
             'hostname'=>'required',
             'sn'=>'required',
@@ -66,14 +72,12 @@ class ServerController extends Controller
             'expired'=>'required'
         ];
  
-        $pesan=[
+        $validator = Validator::make($rules, [
             'hotname.required'=>'Nama Barang Tidak Boleh Kosong',
             'sn.required'=>'Harga Barang Tidak Boleh Kosong',
             'tahun_pembelian.required'=>'Deskripsi Tidak Boleh Kosong',
             'expired.required'=>'Expired Tidak Boleh Kosong'
-        ];
- 
-        $validator=Validator::make(Input::all(),$rules,$pesan);
+        ]);
  
         //jika data ada yang kosong
         if ($validator->fails()) {
