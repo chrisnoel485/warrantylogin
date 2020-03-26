@@ -83,7 +83,7 @@ class ServerController extends Controller
         }else{
 
             DB::table('Servers')->insert([
-                'hostname' => $request->name,
+                'hostname' => $request->hostname,
                 'sn' => $request->sn,
                 'kp' => $request->kp,
                 'merek' => $request->merek,
