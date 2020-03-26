@@ -20,8 +20,8 @@
 			                        <input type="text" name="sn" placeholder="Masukkan Serial Number Server" class="form-control" >
 		                        </div>
                                 <div class="form-group">
-			                        <label for="tahun">Tahun Pembelian Server</label>
-			                        <input type="text" name="tahun" placeholder="Masukkan Tahun Pembelian Server" class="form-control" >
+			                        <label for="tahun_pembelian">Tahun Pembelian Server</label>
+			                        <input type="text" name="tahun_pembelian" placeholder="Masukkan Tahun Pembelian Server" class="form-control" >
 		                        </div>
                             </div>
                             <div class="col-md-6">  

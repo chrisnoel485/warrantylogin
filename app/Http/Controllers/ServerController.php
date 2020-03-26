@@ -62,14 +62,14 @@ class ServerController extends Controller
          $rules =[
             'hostname'=>'required',
             'sn'=>'required',
-            'tahun'=>'required',
+            'tahun_pembelian'=>'required',
             'expired'=>'required'
         ];
  
         $validator = Validator::make($rules, [
             'hostname.required'=>'Nama Barang Tidak Boleh Kosong',
             'sn.required'=>'Harga Barang Tidak Boleh Kosong',
-            'tahun.required'=>'Deskripsi Tidak Boleh Kosong',
+            'tahun_pembelian.required'=>'Deskripsi Tidak Boleh Kosong',
             'expired.required'=>'Expired Tidak Boleh Kosong'
         ]);
  
@@ -87,7 +87,7 @@ class ServerController extends Controller
                 'sn' => $request->sn,
                 'kp' => $request->kp,
                 'merek' => $request->merek,
-                'tahun' => $request->tahun,
+                'tahun' => $request->tahun_pembelian,
                 'expired' => $request->expired
             ]);
             
