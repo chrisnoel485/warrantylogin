@@ -2,32 +2,27 @@
 @section('content')
     <div class="row">
         <div class="col-12">
-            {{ Form::open() }}
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">Tambah Barang</h3>
                     </div>
+                    <form action="/pegawai/store" method="post">
                     <div class="card-body">
-                        @if(!empty($errors->all()))
-                        <div class="alert alert-danger">
-                            {{ Html::ul($errors->all())}}
-                        </div>
-                        @endif
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-6">  
                                 <div class="form-group">
-                                {{ csrf_field() }}
-                                    {{ Form::label('hostname', 'Hostname Server') }}
-                                    {{ Form::text('hostname', '', ['class'=>'form-control', 'placeholder'=>'Masukkan Hostname Server']) }}
-                                </div>
+			                        <label for="hostname">Hostname Server</label>
+			                        <input type="text" name="hostname" placeholder="Masukkan Hostname Server" class="form-control" >
+		                        </div>
                                 <div class="form-group">
-                                    {{ Form::label('sn', 'Serial Number Server') }}
-                                    {{ Form::text('sn', '', ['class'=>'form-control', 'placeholder'=>'Masukkan Serial Number Server']) }}
-                                </div>
+			                        <label for="sn">Serial Number Server</label>
+			                        <input type="text" name="sn" placeholder="Masukkan Serial Number Server" class="form-control" >
+		                        </div>
                                 <div class="form-group">
-                                    {{ Form::label('tahun_pembelian', 'Tahun Pembelian') }}
-                                    {{ Form::text('tahun_pembelian', '', ['class'=>'form-control', 'placeholder'=>'Masukkan Tahun Pembelian Server']) }}
-                                </div>
+			                        <label for="tahun_pembelian">Tahun Pembelian Server</label>
+			                        <input type="text" name="tahun_pembelian" placeholder="Masukkan Tahun Pembelian Server" class="form-control" >
+		                        </div>
+
                             </div>
                             <div class="col-md-6">  
                                 <div class="form-group">
@@ -47,13 +42,13 @@
                             </div>
                         </div>
                     </div>
+                    </form>
                     <div class="card-footer">
                         <a href="{{ URL::to('server/index') }}" class="btn btn-outline-info">Kembali</a>
                         {{ Form::submit('Proses', ['class' => 'btn btn-primary pull-right']) }}
                         <input type="submit" value="Simpan Data">
                     </div>
                 </div>
-                {{ Form::close() }}s
         </div>
     </div>
 @endsection
