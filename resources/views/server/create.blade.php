@@ -6,7 +6,7 @@
                     <div class="card-header">
                         <h3 class="card-title">Tambah Barang</h3>
                     </div>
-                    <form action="/pegawai/store" method="post">
+                    <form action="/server/store" method="post">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-6">  
