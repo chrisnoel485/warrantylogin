@@ -82,7 +82,7 @@ class ServerController extends Controller
  
         }else{
 
-            $server=new \App\Product;
+            $server=new \App\Server;
  
             $server->hostname=Input::get('name');
             $server->sn=Input::get('sn');
@@ -91,6 +91,7 @@ class ServerController extends Controller
             $server->tahun_pembelian=Input::get('tahun_pembelian');
             $server->expired=Input::get('expired');
             $server->save();
+            
  
             Session::flash('message','Product Stored');
  
