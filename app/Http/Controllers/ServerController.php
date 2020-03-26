@@ -153,7 +153,7 @@ class ServerController extends Controller
     public function destroy($id)
     {
         //
-        DB::table('Servers')->where('id',$id)->delete();
+        DB::table('servers')->where('id',$id)->delete();
 		
 	    // alihkan halaman ke halaman pegawai
 	    return redirect('/server');
