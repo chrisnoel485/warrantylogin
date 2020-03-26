@@ -29,10 +29,10 @@
                                 <div class="form-group">
 			                        <label for="kp">KP</label>
                                     <div>
-                                    <select value="{{ $p->kp }}" id="kp" name="kp" class="form-control">
-                                        <option value="KP1">KP1</option>
-                                        <option value="KP2">KP2</option>
-                                        <option value="KP3">KP3</option>
+                                    <select id="kp" name="kp" class="form-control">
+                                        <option value="KP1" {{ $p->kp =='KP1'?'selected':'' }}>KP1</option>
+                                        <option value="KP2" {{ $p->kp =='KP2'?'selected':'' }}>KP2</option>
+                                        <option value="KP3" {{ $p->kp =='KP3'?'selected':'' }}>KP3</option>
                                         <option value="DEV1">DEV1</option>
                                         <option value="DEV3">DEV3</option>
                                     </select>
