@@ -82,15 +82,14 @@ class ServerController extends Controller
  
         }else{
 
-            $server=new \App\Server;
- 
-            $server->hostname=Input::get('name');
-            $server->sn=Input::get('sn');
-            $server->kp=Input::get('kp');
-            $server->merek=Input::get('merek');
-            $server->tahun_pembelian=Input::get('tahun_pembelian');
-            $server->expired=Input::get('expired');
-            $server->save();
+            DB::table('Servers')->insert([
+                'name' => $request->name,
+                'sn' => $request->sn,
+                'kp' => $request->kp,
+                'merek' => $request->merek,
+                'tahun_pembelian' => $request->tahun_pembelian,
+                'expired' => $request->expired
+            ]);
             
  
             Session::flash('message','Product Stored');
