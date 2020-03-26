@@ -22,23 +22,29 @@
 			                        <label for="tahun_pembelian">Tahun Pembelian Server</label>
 			                        <input type="text" name="tahun_pembelian" placeholder="Masukkan Tahun Pembelian Server" class="form-control" >
 		                        </div>
-
                             </div>
                             <div class="col-md-6">  
                                 <div class="form-group">
-                                    {{ Form::label('kp', 'KP') }}
-                                    {{ Form::select('kp', ['kp1'=>'kp1', 'kp2'=>'kp2','kp3'=>'kp3', 'dev1'=>'dev1','dev3'=>'dev3'], null,
-                                        ['class'=>'form-control']) }}        
-                                </div>
+			                        <label for="kp">KP</label>
+                                    <select id="kp" name="kp">
+                                        <option value="KP1">KP1</option>
+                                        <option value="KP2">KP2</option>
+                                        <option value="KP3">KP3</option>
+                                        <option value="DEV1">DEV1</option>
+                                        <option value="DEV3">DEV3</option>
+                                    </select>
+			                    </div>
                                 <div class="form-group">
-                                    {{ Form::label('merek', 'Merek') }}
-                                    {{ Form::select('merek', ['lenovo'=>'lenovo', 'hp'=>'hp'], null,
-                                        ['class'=>'form-control']) }}         
-                                </div>
+			                        <label for="merek">Merek Server</label>
+                                    <select id="merek" name="merek">
+                                        <option value="HP">HP</option>
+                                        <option value="Lenovo">Lenovo</option>
+                                    </select>
+			                    </div>
                                 <div class="form-group">
-                                    {{ Form::label('expired', 'Expired Warranty Server') }}
-                                    {{ Form::text('expired', '', ['class'=>'form-control', 'placeholder'=>'Masukkan Expired Warranty Server']) }}
-                                </div>
+			                        <label for="expired">Tahun Expired Warranty Server</label>
+			                        <input type="text" name="expired" placeholder="Masukkan Tahun Expired Warranty Server" class="form-control" >
+		                        </div>
                             </div>
                         </div>
                     </div>
