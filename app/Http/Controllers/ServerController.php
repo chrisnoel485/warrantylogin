@@ -138,11 +138,12 @@ class ServerController extends Controller
                 'tahun' => $request->tahun_pembelian,
                 'expired' => $request->expired
             ]);
-            
+            // alihkan halaman ke halaman pegawai
+            return redirect('/pegawai');
  
             Session::flash('message','Succes Edit Server');
  
-            return redirect('/server');
+            return view('/server');
     }
 
     /**
