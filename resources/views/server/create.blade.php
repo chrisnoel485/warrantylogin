@@ -27,7 +27,7 @@
                                 <div class="form-group">
 			                        <label for="kp">KP</label>
                                     <div>
-                                    <select id="kp" name="kp">
+                                    <select id="kp" name="kp" class="form-control">
                                         <option value="KP1">KP1</option>
                                         <option value="KP2">KP2</option>
                                         <option value="KP3">KP3</option>
@@ -39,7 +39,7 @@
                                 <div class="form-group">
 			                        <label for="merek">Merek Server</label>
                                     <div>
-                                    <select id="merek" name="merek">
+                                    <select id="merek" name="merek"class="form-control">
                                         <option value="HP">HP</option>
                                         <option value="Lenovo">Lenovo</option>
                                     </select>
