@@ -150,8 +150,12 @@ class ServerController extends Controller
      * @param  \App\Server  $server
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Server $server)
+    public function destroy($id)
     {
         //
+        DB::table('Servers')->where('id',$id)->delete();
+		
+	    // alihkan halaman ke halaman pegawai
+	    return redirect('/server');
     }
 }
