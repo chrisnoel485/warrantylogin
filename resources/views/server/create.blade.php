@@ -7,6 +7,7 @@
                         <h3 class="card-title">Tambah Barang</h3>
                     </div>
                     <form action="/server/store" method="post">
+                    {{ csrf_field() }}
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-6">  
