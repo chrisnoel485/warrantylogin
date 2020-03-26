@@ -44,7 +44,7 @@
                                 <td>{{ $server->tahun }}</td>
                                 <td>{{ $server->expired }}</td>
                                 <td class="text-center">
-                                    <a class="btn btn-info" href="/server/edit/{{ $server->id }}"><i class="fa fa-pencil"></a>
+                                    <a class="btn btn-success" href="/server/edit/{{ $server->id }}"><i class="fa fa-pencil"></a>
                                   | 
 		                            <a class="btn btn-danger" href="/server/hapus/{{ $server->id }}"><i class="fa fa-trash"></i></a>
                                 </td>
