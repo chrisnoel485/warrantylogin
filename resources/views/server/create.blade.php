@@ -55,7 +55,7 @@
                     </form>
                     <div class="card-footer">
                         <a href="{{ URL::to('server') }}" class="btn btn-outline-info">Kembali</a>
-                        <input type="submit" value="Proses" class="btn btn-outline-info">
+                        <input type="submit" value="Proses" class="btn btn-primary pull-right">
                     </div>
                 </div>
         </div>
