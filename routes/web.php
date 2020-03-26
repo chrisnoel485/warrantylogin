@@ -30,4 +30,5 @@ Route::get('admin/profile', 'ProfileController@index');
 Route::get('/server','ServerController@index');
 Route::get('/server/create','ServerController@create');
 Route::post('/server/store','ServerController@store');
+Route::get('/server/edit/{id}','ServerController@edit');
 Route::post('/server/update','ServerController@update');
