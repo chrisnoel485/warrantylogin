@@ -26,6 +26,7 @@
                             <div class="col-md-6">  
                                 <div class="form-group">
 			                        <label for="kp">KP</label>
+                                    <div>
                                     <select id="kp" name="kp">
                                         <option value="KP1">KP1</option>
                                         <option value="KP2">KP2</option>
@@ -33,13 +34,16 @@
                                         <option value="DEV1">DEV1</option>
                                         <option value="DEV3">DEV3</option>
                                     </select>
+                                    </div>
 			                    </div>
                                 <div class="form-group">
 			                        <label for="merek">Merek Server</label>
+                                    <div>
                                     <select id="merek" name="merek">
                                         <option value="HP">HP</option>
                                         <option value="Lenovo">Lenovo</option>
                                     </select>
+                                    </div>
 			                    </div>
                                 <div class="form-group">
 			                        <label for="expired">Tahun Expired Warranty Server</label>
