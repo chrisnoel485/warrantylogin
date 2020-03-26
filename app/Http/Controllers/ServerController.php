@@ -141,7 +141,7 @@ class ServerController extends Controller
             
             Session::flash('message','Succes Edit Server');
  
-            return view('/server');
+            return redirect('/server');
     }
 
     /**
