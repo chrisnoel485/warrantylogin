@@ -92,7 +92,7 @@ class ServerController extends Controller
             ]);
             
  
-            Session::flash('message','Product Stored');
+            Session::flash('message','Succes Add Server');
  
             return redirect('/server');
         }
@@ -115,9 +115,10 @@ class ServerController extends Controller
      * @param  \App\Server  $server
      * @return \Illuminate\Http\Response
      */
-    public function edit(Server $server)
+    public function edit($id)
     {
-        //
+	    $server = DB::table('servers')->where('id',$id)->get();
+	    return view('server/edit',['servers' => $server]);
     }
 
     /**
@@ -127,9 +128,46 @@ class ServerController extends Controller
      * @param  \App\Server  $server
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Server $server)
+    public function update(Request $request)
     {
         //
+        $rules =[
+            'hostname'=>'required',
+            'sn'=>'required',
+            'tahun_pembelian'=>'required',
+            'expired'=>'required'
+        ];
+ 
+        $validator = Validator::make($rules, [
+            'hostname.required'=>'Nama Barang Tidak Boleh Kosong',
+            'sn.required'=>'Harga Barang Tidak Boleh Kosong',
+            'tahun_pembelian.required'=>'Deskripsi Tidak Boleh Kosong',
+            'expired.required'=>'Expired Tidak Boleh Kosong'
+        ]);
+ 
+        //jika data ada yang kosong
+        if ($validator->fails()) {
+ 
+            //refresh halaman
+            return Redirect::to('server/create')
+            ->withErrors($validator);
+ 
+        }else{
+
+            DB::table('servers')->where('id',$request->id)->update([
+                'hostname' => $request->hostname,
+                'sn' => $request->sn,
+                'kp' => $request->kp,
+                'merek' => $request->merek,
+                'tahun' => $request->tahun_pembelian,
+                'expired' => $request->expired
+            ]);
+            
+ 
+            Session::flash('message','Succes Edit Server');
+ 
+            return redirect('/server');
+        }
     }
 
     /**

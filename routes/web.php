@@ -30,3 +30,4 @@ Route::get('admin/profile', 'ProfileController@index');
 Route::get('/server','ServerController@index');
 Route::get('/server/create','ServerController@create');
 Route::post('/server/store','ServerController@store');
+Route::post('/server/update','ServerController@update');
