@@ -53,11 +53,11 @@
                             </div>
                         </div>
                     </div>
-                    </form>
                     <div class="card-footer">
                         <a href="{{ URL::to('server') }}" class="btn btn-outline-info">Kembali</a>
                         <input type="submit" value="Proses" class="btn btn-primary pull-right">
                     </div>
+                    </form>
                 </div>
         </div>
     </div>
