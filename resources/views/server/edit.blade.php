@@ -12,6 +12,7 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-6">  
+                            <input type="hidden" name="id" value="{{ $p->id }}"> <br/>
                                 <div class="form-group">
 			                        <label for="hostname">Hostname Server</label>
 			                        <input value="{{ $p->hostname }}" type="text" name="hostname" placeholder="Masukkan Hostname Server" class="form-control" >
